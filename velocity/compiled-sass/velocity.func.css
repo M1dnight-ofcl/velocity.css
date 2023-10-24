@@ -1,0 +1,230 @@
+html * {
+  position: relative;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-black {
+  background: black;
+}
+
+.bg-white {
+  background: white;
+}
+
+.bg-red {
+  background: red;
+}
+
+.bg-darkred {
+  background: darkred;
+}
+
+.bg-orange {
+  background: orange;
+}
+
+.bg-darkorange {
+  background: darkorange;
+}
+
+.bg-yellow {
+  background: yellow;
+}
+
+.bg-lightyellow {
+  background: lightyellow;
+}
+
+.bg-green {
+  background: green;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.bg-darkblue {
+  background: darkblue;
+}
+
+.bg-purple {
+  background: purple;
+}
+
+.bg-pink {
+  background: pink;
+}
+
+.bg-lightpink {
+  background: lightpink;
+}
+
+.bg-gray {
+  background: gray;
+}
+
+.bg-darkgray {
+  background: darkgray;
+}
+
+.bg-lightgray {
+  background: lightgray;
+}
+
+.clr-black {
+  color: black;
+}
+
+.clr-white {
+  color: white;
+}
+
+.clr-red {
+  color: red;
+}
+
+.clr-darkred {
+  color: darkred;
+}
+
+.clr-orange {
+  color: orange;
+}
+
+.clr-darkorange {
+  color: darkorange;
+}
+
+.clr-yellow {
+  color: yellow;
+}
+
+.clr-lightyellow {
+  color: lightyellow;
+}
+
+.clr-green {
+  color: green;
+}
+
+.clr-blue {
+  color: blue;
+}
+
+.clr-darkblue {
+  color: darkblue;
+}
+
+.clr-purple {
+  color: purple;
+}
+
+.clr-pink {
+  color: pink;
+}
+
+.clr-lightpink {
+  color: lightpink;
+}
+
+.clr-gray {
+  color: gray;
+}
+
+.clr-darkgray {
+  color: darkgray;
+}
+
+.clr-lightgray {
+  color: lightgray;
+}
+
+.occupy-top {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  top: 0;
+  height: 50%;
+}
+
+.occupy-bottom {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  bottom: 0;
+  height: 50%;
+}
+
+.occupy-left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  top: 0;
+  height: 100%;
+}
+
+.occupy-right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  top: 0;
+  height: 100%;
+}
+
+.occupy-top-left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  top: 0;
+  height: 50%;
+}
+
+.occupy-top-right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  top: 0;
+  height: 50%;
+}
+
+.occupy-bottom-left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  bottom: 0;
+  height: 50%;
+}
+
+.occupy-bottom-right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  bottom: 0;
+  height: 50%;
+}
+
+.section {
+  height: 50dvh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.section-fs {
+  height: 100dvh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.prevent-scroll {
+  overflow: none;
+}/*# sourceMappingURL=velocity.func.css.map */

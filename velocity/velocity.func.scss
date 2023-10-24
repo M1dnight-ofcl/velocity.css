@@ -1,16 +1,52 @@
 // Velocity.func.css
 // M1dnight (c) 2023
 
-html * { position: relative; }
-body { height: 100%; width: 100%; }
+@use "sass:math";
+@use 'sass:list';
 
-.occupy-right, .occupy-left {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: #fff;
+html * { position: relative; }
+body { 
+    height: 100%; 
+    width: 100%; 
+    padding: 0;
+    margin: 0;
 }
 
-.occupy-right { right: 0; }
-.occupy-left  { left: 0;  }
+@mixin occupy($xpos: "left", $ypos: "fill") {
+    position: absolute; 
+    @if $xpos == "right" { right: 0; width: 50%; } 
+    @else if $xpos == "left" { left: 0; width: 50%; }
+    @else if $xpos == "fill" { left: 0; width: 100%; }
+    @else { @error "property must be left, right, or fill; not #{$xpos}"; }
+    @if $ypos == "top" { top: 0; height: 50%; } 
+    @else if $ypos == "bottom" { bottom: 0; height: 50%; }
+    @else if $ypos == "fill" { top: 0; height: 100%; }
+    @else { @error "property must be top, bottom, or fill; not #{$ypos}"; }
+}
+
+@mixin section-template($height) {
+    height: $height;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: block; 
+}
+
+$colors: black, white, red, darkred, orange, darkorange, yellow, lightyellow, green, blue, darkblue, purple, pink, lightpink, gray, darkgray, lightgray;
+@each $color in $colors { .bg-#{$color} { background: $color; } }
+@each $color in $colors { .clr-#{$color} { color: $color; } }
+
+$possibleXOccupy: "left", "right";
+$possibleYOccupy: "top", "bottom";
+
+@each $occupy in $possibleYOccupy { .occupy-#{$occupy} { @include occupy($ypos: $occupy); } }
+@each $occupy in $possibleXOccupy { .occupy-#{$occupy} { @include occupy($xpos: $occupy); } }
+.occupy-top-left { @include occupy("left", "top"); }
+.occupy-top-right { @include occupy("right", "top"); }
+.occupy-bottom-left { @include occupy("left", "bottom"); }
+.occupy-bottom-right { @include occupy("right", "bottom"); }
+
+.section { @include section-template(50dvh); }
+.section-fs { @include section-template(100dvh); }
+
+.prevent-scroll { overflow: none; }
