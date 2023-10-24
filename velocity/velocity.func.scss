@@ -59,6 +59,7 @@ $possibleYOccupy: "top", "bottom";
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
 .position-center-on-parent {
@@ -69,5 +70,13 @@ $possibleYOccupy: "top", "bottom";
     position: fixed;
     @include position-center;
 }
+.position-top-left-on-parent { top: 0; left: 0; position: absolute; }
+.position-top-right-on-parent {  top: 0; right: 0; position: absolute; }
+.position-bottom-left-on-parent {  bottom: 0; left: 0; position: absolute; }
+.position-bottom-right-on-parent {  bottom: 0; right: 0; position: absolute; }
+.position-bottom-center-on-parent {  bottom: 0; left: 50%; transform: translateX(-50%); position: absolute; }
+.position-top-center-on-parent {  top: 0; left: 50%; transform: translateX(-50%); position: absolute; }
+.position-center-left-on-parent {  top: 50%; left: 0; transform: translateY(-50%); position: absolute; }
+.position-center-right-on-parent {  top: 50%; right: 0%; transform: translateY(-50%); position: absolute; }
 
 .prevent-scroll { overflow: none; }
