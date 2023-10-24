@@ -4,7 +4,14 @@
 @use "sass:math";
 @use 'sass:list';
 
-html * { position: relative; }
+html * { 
+    position: relative; 
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body { 
     height: 100%; 
     width: 100%; 
@@ -23,7 +30,6 @@ body {
     @else if $ypos == "fill" { top: 0; height: 100%; }
     @else { @error "property must be top, bottom, or fill; not #{$ypos}"; }
 }
-
 @mixin section-template($height) {
     height: $height;
     width: 100%;
@@ -48,5 +54,20 @@ $possibleYOccupy: "top", "bottom";
 
 .section { @include section-template(50dvh); }
 .section-fs { @include section-template(100dvh); }
+
+@mixin position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.position-center-on-parent {
+    position: absolute;
+    @include position-center;
+}
+.position-center-on-screen {
+    position: fixed;
+    @include position-center;
+}
 
 .prevent-scroll { overflow: none; }

@@ -7,26 +7,45 @@
     <link rel="stylesheet" href="./velocity/compiled-sass/velocity.func.css"/>
     <link rel="stylesheet" href="./velocity/compiled-sass/velocity.style.css"/>
 </head>
+<style>
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 <body>
     <div class="section-fs">
         <div class="
         occupy-top-left 
         bg-darkgray
-        clr-darkblue">
-            <h1>I should be on the top left</h1>
+        clr-darkblue"
+        style="padding: 50px;">
+            <h1 class="position-center-on-parent">I should be on the top left</h1>
         </div>
         <div class="
         occupy-bottom-left 
         bg-black
-        clr-white">
-            <h1>I should be on the bottom left</h1>
+        clr-white"
+        style="padding: 50px;">
+            <h1 class="position-center-on-parent">I should be on the bottom left</h1>
         </div>
         <div class="
         occupy-right 
         bg-lightgray
-        clr-darkred">
-            <h1>I should be on the right</h1>
+        clr-darkred"
+        style="padding: 50px;">
+            <h1 class="position-center-on-parent">I should be on the right</h1>
         </div> 
+
+        <div class="
+        position-center-on-parent
+        bg-blue
+        clr-lightgray" 
+        style=" height: fit-content; width: fit-content; padding: 50px; ">
+            <h1>I should be centered</h1>
+        </div>
+    </div>
+    <div class="section">
+        
     </div>
 </body>
 </html>
