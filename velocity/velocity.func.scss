@@ -1,0 +1,16 @@
+// Velocity.func.css
+// M1dnight (c) 2023
+
+html * { position: relative; }
+body { height: 100%; width: 100%; }
+
+.occupy-right, .occupy-left {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+}
+
+.occupy-right { right: 0; }
+.occupy-left  { left: 0;  }
