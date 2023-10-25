@@ -1,9 +1,22 @@
 // Velocity.func.css
 // M1dnight (c) 2023
 
+// ALL CLASS:
+//   positioning classes:
+//     occupy-{x}-{y}: left, right, top, bottom [with variation]
+//     position{x}-{y}-{rel}: left, right, top, bottom [with variation]
+//   color classes:
+//     bg-{clr}: all colors
+//     clr-{clr}: all colors
+//   sizing classes:
+//     font-size-{size}: xxs-xxl
+//     font-weight-{weight}: 100-800
+
+// import lib
 @use "sass:math";
 @use 'sass:list';
 
+// default html child styling
 html * { 
     position: relative; 
     height: auto;
@@ -12,6 +25,7 @@ html * {
     margin: 0;
     box-sizing: border-box;
 }
+// body styling
 body { 
     height: 100%; 
     width: 100%; 
@@ -19,6 +33,7 @@ body {
     margin: 0;
 }
 
+// occupy template
 @mixin occupy($xpos: "left", $ypos: "fill") {
     position: absolute; 
     @if $xpos == "right" { right: 0; width: 50%; } 
@@ -30,6 +45,7 @@ body {
     @else if $ypos == "fill" { top: 0; height: 100%; }
     @else { @error "property must be top, bottom, or fill; not #{$ypos}"; }
 }
+//section template
 @mixin section-template($height) {
     height: $height;
     width: 100%;
@@ -37,10 +53,24 @@ body {
     margin: 0;
     display: block; 
 }
+// all colors
+$colors: (
+    "white": #fff, "black": #000000,
+    "red": #e92f2f, "darkred": #971a1a,
+    "orange": #e9832f, "darkorange": #ac5610,
+    "lightyellow": #f2e782, "yellow": #f2e145,
+    "green": #4ee92f, "darkgreen": #288815,
+    "blue": #2b9fe6, "darkblue": #0f347d,
+    "purple": #8819ff,
+    "magenta": #bb1df0,
+    "lightpink": #ee82df, "pink": #f01dd4,
+    "lightgray": #a6a6a6, "midgray": #818181, "gray": #535353, "darkgray": #343434, "darkestgray": #161616,
+    "lightslate": #4b4f5f, "slate": #343743, "darkslate": #1c1e25,
+);
 
-$colors: black, white, red, darkred, orange, darkorange, yellow, lightyellow, green, blue, darkblue, purple, pink, lightpink, gray, darkgray, lightgray;
-@each $color in $colors { .bg-#{$color} { background: $color; } }
-@each $color in $colors { .clr-#{$color} { color: $color; } }
+// sets all color classes
+@each $color, $hex in $colors { .bg-#{$color} { color: $hex; } }
+@each $color, $hex in $colors { .clr-#{$color} { color: $hex; } }
 
 $possibleXOccupy: "left", "right";
 $possibleYOccupy: "top", "bottom";
