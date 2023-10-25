@@ -1,1 +1,35 @@
-/*# sourceMappingURL=velocity.style.css.map */
+.bg-dark-1 {
+  background: #282828;
+}
+
+.txt-dark-1 {
+  color: #e3e3e3;
+}
+
+.border-radius-xxs {
+  border-radius: 0.1vmin;
+}
+
+.border-radius-xs {
+  border-radius: 0.35vmin;
+}
+
+.border-radius-s {
+  border-radius: 0.65vmin;
+}
+
+.border-radius-m {
+  border-radius: 1vmin;
+}
+
+.border-radius-l {
+  border-radius: 1.5vmin;
+}
+
+.border-radius-xl {
+  border-radius: 2vmin;
+}
+
+.border-radius-xxl {
+  border-radius: 3vmin;
+}/*# sourceMappingURL=velocity.style.css.map */

@@ -1,1 +1,9 @@
-$bg1: #fff;
+$bg1-dark: #282828;
+$text1-dark: #e3e3e3;
+
+$border-rad-values: ("xxs": 0.1vmin, "xs": 0.35vmin, "s": 0.65vmin, "m": 1vmin, "l": 1.5vmin, "xl": 2vmin, "xxl": 3vmin);
+
+.bg-dark-1 { background: $bg1-dark; }
+.txt-dark-1 { color: $text1-dark; }
+
+@each $size, $value in $border-rad-values { .border-radius-#{$size} { border-radius: $value; } }
