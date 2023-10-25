@@ -1,5 +1,11 @@
-$bg1-dark: #282828;
-$text1-dark: #e3e3e3;
+// velocity.func.css
+// M1dnight (c) 2023
+
+@use 'config' as config;
+@use 'themes/default' as theme-default;
+
+$bg1-dark: theme-default.$bg1-dark;
+$text1-dark: theme-default.$text1-dark;
 
 $border-rad-values: ("xxs": 0.1vmin, "xs": 0.35vmin, "s": 0.65vmin, "m": 1vmin, "l": 1.5vmin, "xl": 2vmin, "xxl": 3vmin);
 
