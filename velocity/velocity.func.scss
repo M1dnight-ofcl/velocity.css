@@ -1,6 +1,18 @@
 // Velocity.func.css
 // M1dnight (c) 2023
 
+// ALL CLASS:
+//   positioning classes:
+//     occupy-{x}-{y}: left, right, top, bottom [with variation]
+//     position{x}-{y}-{rel}: left, right, top, bottom [with variation]
+//   color classes:
+//     bg-{clr}: all colors
+//     clr-{clr}: all colors
+//   sizing classes:
+//     font-size-{size}: xxs-xxl
+//     font-weight-{weight}: 100-800
+
+// import lib
 @use "sass:math";
 @use 'sass:list';
 
