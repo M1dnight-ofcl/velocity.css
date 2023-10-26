@@ -83,7 +83,7 @@ $possibleYOccupy: "top", "bottom";
 
 // occupy classes
 @each $occupyY in $possibleYOccupy { 
-    .occupy-#{$occupy} { @include occupy($ypos: $occupy); } 
+    .occupy-#{$occupyY} { @include occupy($ypos: $occupyY); } 
     @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX} { @include occupy($xpos: $occupyX, $ypos: $occupyY); } }
 }
 @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX} { @include occupy($xpos: $occupyX); } }
