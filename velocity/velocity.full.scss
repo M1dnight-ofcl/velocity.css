@@ -24,5 +24,4 @@
 // you can compile it using "live sass compiler" which is
 // the tool used to create velocity
 
-@use 'velocity.func';
-@use 'velocity.style';
+@import 'velocity.func', 'velocity.style';
