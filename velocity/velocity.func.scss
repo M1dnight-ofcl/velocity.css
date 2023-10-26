@@ -4,13 +4,20 @@
 // ALL CLASS:
 //   positioning classes:
 //     occupy-{x}-{y}: left, right, top, bottom [with variation]
-//     position{x}-{y}-{rel}: left, right, top, bottom [with variation]
+//     position-{x}-{y}-{rel}: left, right, top, bottom [with variation]
 //   color classes:
 //     bg-{clr}: all colors
 //     clr-{clr}: all colors
 //   sizing classes:
 //     font-size-{size}: xxs-xxl
-//     font-weight-{weight}: 100-800
+//     font-weight-{weight}: 100-800, thin-bolder
+
+// NOTICE
+// this is an .scss file, meaning it must be compiled
+// you can use the compiled .css files in the style folder
+// but this will not be updated until you compile this file.
+// you can compile it using "live sass compiler" which is
+// the tool used to create velocity
 
 // import lib
 @use "sass:math";
@@ -30,6 +37,7 @@ html * {
 // are given to all html children so paddings 
 // don't resize the box and everything is relative 
 // to it's parent
+// it also removes default margins and paddings.
 
 // body styling
 body { 
