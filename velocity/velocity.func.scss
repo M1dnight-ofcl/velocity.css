@@ -23,8 +23,14 @@ html * {
     width: auto;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
+
+// position: relative/box-sixing: border-box
+// are given to all html children so paddings 
+// don't resize the box and everything is relative 
+// to it's parent
+
 // body styling
 body { 
     height: 100%; 
@@ -32,6 +38,7 @@ body {
     padding: 0;
     margin: 0;
 }
+// this removes default margin and padding
 
 // occupy template
 @mixin occupy($xpos: "left", $ypos: "fill") {
@@ -45,6 +52,11 @@ body {
     @else if $ypos == "fill" { top: 0; height: 100%; }
     @else { @error "property must be top, bottom, or fill; not #{$ypos}"; }
 }
+
+// occupy indicates that an element should
+// take up a percentage of it's parents on
+// a specified side.
+
 //section template
 @mixin section-template($height) {
     height: $height;
@@ -53,6 +65,10 @@ body {
     margin: 0;
     display: block; 
 }
+
+// this section template helps by simplifying 
+// many of the section classes by expanding this class.
+
 // all colors
 $colors: ( 
     "white": #fff, "black": #000000,
@@ -66,39 +82,37 @@ $colors: (
     "lightpink": #ee82df, "pink": #f01dd4,
     "lightgray": #a6a6a6, "midgray": #818181, "gray": #535353, "darkgray": #343434, "darkestgray": #161616,
     "lightslate": #4b4f5f, "slate": #343743, "darkslate": #1c1e25,
+    "plum": #993879, "lightplum": #c4509d, "darkplum": #64254f
 );
 
 // sets all color classes
 @each $color, $hex in $colors { .bg-#{$color} { background: $hex; } }
 @each $color, $hex in $colors { .clr-#{$color} { color: $hex; } }
 
+// occupy vars
 $possibleXOccupy: "left", "right";
 $possibleYOccupy: "top", "bottom";
 
-@each $occupy in $possibleYOccupy { .occupy-#{$occupy} { @include occupy($ypos: $occupy); } }
-@each $occupy in $possibleXOccupy { .occupy-#{$occupy} { @include occupy($xpos: $occupy); } }
-.occupy-top-left { @include occupy("left", "top"); }
-.occupy-top-right { @include occupy("right", "top"); }
-.occupy-bottom-left { @include occupy("left", "bottom"); }
-.occupy-bottom-right { @include occupy("right", "bottom"); }
+// occupy classes
+@each $occupyY in $possibleYOccupy { 
+    .occupy-#{$occupy} { @include occupy($ypos: $occupy); } 
+    @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX} { @include occupy($xpos: $occupyX, $ypos: $occupyY); } }
+}
+@each $occupyX in $possibleXOccupy { .occupy-#{$occupyX} { @include occupy($xpos: $occupyX); } }
 
+// section templates
 .section { @include section-template(50dvh); }
 .section-fs { @include section-template(100dvh); }
 
+// position center template
 @mixin position-center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.position-center-on-parent {
-    position: absolute;
-    @include position-center;
-}
-.position-center-on-screen {
-    position: fixed;
-    @include position-center;
-}
+// position classes [relative]
+.position-center-on-parent { position: absolute; @include position-center; }
 .position-top-left-on-parent { top: 0; left: 0; position: absolute; }
 .position-top-right-on-parent {  top: 0; right: 0; position: absolute; }
 .position-bottom-left-on-parent {  bottom: 0; left: 0; position: absolute; }
@@ -108,11 +122,18 @@ $possibleYOccupy: "top", "bottom";
 .position-center-left-on-parent {  top: 50%; left: 0; transform: translateY(-50%); position: absolute; }
 .position-center-right-on-parent {  top: 50%; right: 0%; transform: translateY(-50%); position: absolute; }
 
+// position classes [fixed]
+.position-center-on-screen { position: fixed; @include position-center; }
+
+// font sizes
 $font-sizes: ("xxs": .5em, "xs": .75em, "s": 1em, "m": 1.5em, "l": 2em, "xl": 3.5em, "xxl": 5em);
-$font-weight: 100,200,300,400,500,600,700,800;
-$txt-aligns: left, right, center;
 @each $size, $value in $font-sizes { .font-size-#{$size} { font-size: $value; } };
+// font weights
+$font-weight: 100,200,300,400,500,600,700,800;
 @each $size in $font-weight { .font-weight-#{$size} { font-weight: $size; } };
+// font aligns
+$txt-aligns: left, right, center;
 @each $align in $txt-aligns { .txt-align-#{$align} { text-align: $align; } };
 
+// prevents scroll
 .prevent-scroll { overflow: none; }
