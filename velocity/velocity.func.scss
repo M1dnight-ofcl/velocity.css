@@ -124,12 +124,20 @@ $possibleYOccupy: "top", "bottom";
 
 // position classes [fixed]
 .position-center-on-screen { position: fixed; @include position-center; }
+.position-top-left-on-screen { top: 0; left: 0; position: fixed; }
+.position-top-right-on-screen {  top: 0; right: 0; position: fixed; }
+.position-bottom-left-on-screen {  bottom: 0; left: 0; position: fixed; }
+.position-bottom-right-on-screen {  bottom: 0; right: 0; position: fixed; }
+.position-bottom-center-on-screen {  bottom: 0; left: 50%; transform: translateX(-50%); position: fixed; }
+.position-top-center-on-screen {  top: 0; left: 50%; transform: translateX(-50%); position: fixed; }
+.position-center-left-on-screen {  top: 50%; left: 0; transform: translateY(-50%); position: fixed; }
+.position-center-right-on-screen {  top: 50%; right: 0%; transform: translateY(-50%); position: fixed; }
 
 // font sizes
 $font-sizes: ("xxs": .5em, "xs": .75em, "s": 1em, "m": 1.5em, "l": 2em, "xl": 3.5em, "xxl": 5em);
 @each $size, $value in $font-sizes { .font-size-#{$size} { font-size: $value; } };
 // font weights
-$font-weight: 100,200,300,400,500,600,700,800;
+$font-weight: 100,200,300,400,500,600,700,800,thin,light,medium,bold,bolder;
 @each $size in $font-weight { .font-weight-#{$size} { font-weight: $size; } };
 // font aligns
 $txt-aligns: left, right, center;
