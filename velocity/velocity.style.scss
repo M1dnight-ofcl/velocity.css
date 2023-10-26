@@ -1,5 +1,17 @@
-// velocity.func.css
+// velocity.style.css
 // M1dnight (c) 2023
+
+// ALL CLASS:
+//   color classes:
+//     bg-{theme}-{shade}: sets background based on theme [dark, light] and shades [1+]
+//     txt-{theme}-{shade}: sets color of text based on theme [dark, light] and shades [1+]
+
+// NOTICE:
+// this is an .scss file, meaning it must be compiled
+// you can use the compiled .css files in the style folder
+// but this will not be updated until you compile this file.
+// you can compile it using "live sass compiler" which is
+// the tool used to create velocity
 
 @use 'config' as config;
 @use 'themes/default' as theme-default;

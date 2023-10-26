@@ -1,0 +1,28 @@
+// velocity.full.css
+// M1dnight (c) 2023
+
+// ALL CLASS:
+//   Functional Classes:
+//     positioning classes:
+//       occupy-{x}-{y}: left, right, top, bottom [with variation]
+//       position-{x}-{y}-{rel}: left, right, top, bottom [with variation]
+//     color classes:
+//       bg-{clr}: all colors
+//       clr-{clr}: all colors
+//     sizing classes:
+//       font-size-{size}: xxs-xxl
+//       font-weight-{weight}: 100-800, thin-bolder
+//   Stylistic Classes:
+//     color classes:
+//       bg-{theme}-{shade}: sets background based on theme [dark, light] and shades [1+]
+//       txt-{theme}-{shade}: sets color of text based on theme [dark, light] and shades [1+]
+
+// NOTICE:
+// this is an .scss file, meaning it must be compiled
+// you can use the compiled .css files in the style folder
+// but this will not be updated until you compile this file.
+// you can compile it using "live sass compiler" which is
+// the tool used to create velocity
+
+@use 'velocity.func';
+@use 'velocity.style';
