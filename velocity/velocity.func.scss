@@ -3,7 +3,7 @@
 
 // ALL CLASS:
 //   positioning classes:
-//     occupy-{x}-{y}: left, right, top, bottom [with variation]
+//     occupy-{x}-{y}-{percent}: left, right, top, bottom [with variation]
 //     position-{x}-{y}-{rel}: left, right, top, bottom [with variation]
 //   color classes:
 //     bg-{clr}: all colors
@@ -84,19 +84,11 @@ $occupyPercent: ("10":10%,"25":25%,"35":35%,"50":50%,"60":60%,"75":75%,"90":90%)
 
 // occupy classes
 @each $percentString, $percent in $occupyPercent {
-    @if not $percentString == "50" {
-        @each $occupyY in $possibleYOccupy { 
-            .occupy-#{$occupyY}-#{$percentString} { @include occupy($ypos: $occupyY, $occupyYPercent: $percent); } 
-            @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $ypos: $occupyY, $occupyYPercent: $percent, $occupyXPercent: $percent); } }
-        }
-        @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $occupyXPercent: $percent); } }
-    } @else if $percentString == "50" {
-        @each $occupyY in $possibleYOccupy { 
-            .occupy-#{$occupyY} { @include occupy($ypos: $occupyY); } 
-            @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX} { @include occupy($xpos: $occupyX, $ypos: $occupyY); } }
-        }
-        @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX} { @include occupy($xpos: $occupyX); } }    
+    @each $occupyY in $possibleYOccupy { 
+        .occupy-#{$occupyY}-#{$percentString} { @include occupy($ypos: $occupyY, $occupyYPercent: $percent); } 
+        @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $ypos: $occupyY, $occupyYPercent: $percent, $occupyXPercent: $percent); } }
     }
+    @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $occupyXPercent: $percent); } }
 }
 // section templates
 .section { @include section-template(50dvh); }
