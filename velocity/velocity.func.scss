@@ -81,7 +81,6 @@ body {
 $possibleXOccupy: "left", "right";
 $possibleYOccupy: "top", "bottom";
 $occupyPercent: ("10":10%,"25":25%,"35":35%,"50":50%,"60":60%,"75":75%,"90":90%);
-
 // occupy classes
 @each $percentString, $percent in $occupyPercent {
     @each $occupyY in $possibleYOccupy { 
@@ -90,9 +89,12 @@ $occupyPercent: ("10":10%,"25":25%,"35":35%,"50":50%,"60":60%,"75":75%,"90":90%)
     }
     @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $occupyXPercent: $percent); } }
 }
+
+// section vars
+$sectionHeights: 15dvh, 25dvh, 35dvh, 50dvh, 65dvh, 75dvh, 85dvh, 100dvh;
+
 // section templates
-.section { @include section-template(50dvh); }
-.section-fs { @include section-template(100dvh); }
+@each $height in $sectionHeights { .section-#{$height} { @include section-template($height); } }
 
 // position center template
 @mixin position-center {
