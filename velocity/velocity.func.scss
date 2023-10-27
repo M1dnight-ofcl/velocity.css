@@ -49,14 +49,14 @@ body {
 // this removes default margin and padding
 
 // occupy template
-@mixin occupy($xpos: "left", $ypos: "fill") {
+@mixin occupy($xpos: "left", $ypos: "fill", $occupyXPercent: 50%, $occupyYPercent: 50%) {
     position: absolute; 
-    @if $xpos == "right" { right: 0; width: 50%; } 
-    @else if $xpos == "left" { left: 0; width: 50%; }
+    @if $xpos == "right" { right: 0; width: $occupyXPercent; } 
+    @else if $xpos == "left" { left: 0; width: $occupyXPercent; }
     @else if $xpos == "fill" { left: 0; width: 100%; }
     @else { @error "property must be left, right, or fill; not #{$xpos}"; }
-    @if $ypos == "top" { top: 0; height: 50%; } 
-    @else if $ypos == "bottom" { bottom: 0; height: 50%; }
+    @if $ypos == "top" { top: 0; height: $occupyYPercent; } 
+    @else if $ypos == "bottom" { bottom: 0; height: $occupyYPercent; }
     @else if $ypos == "fill" { top: 0; height: 100%; }
     @else { @error "property must be top, bottom, or fill; not #{$ypos}"; }
 }
@@ -80,14 +80,24 @@ body {
 // occupy vars
 $possibleXOccupy: "left", "right";
 $possibleYOccupy: "top", "bottom";
+$occupyPercent: ("10":10%,"25":25%,"35":35%,"50":50%,"60":60%,"75":75%,"90":90%);
 
 // occupy classes
-@each $occupyY in $possibleYOccupy { 
-    .occupy-#{$occupyY} { @include occupy($ypos: $occupyY); } 
-    @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX} { @include occupy($xpos: $occupyX, $ypos: $occupyY); } }
+@each $percentString, $percent in $occupyPercent {
+    @if not $percentString == "50" {
+        @each $occupyY in $possibleYOccupy { 
+            .occupy-#{$occupyY}-#{$percentString} { @include occupy($ypos: $occupyY, $occupyYPercent: $percent); } 
+            @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $ypos: $occupyY, $occupyYPercent: $percent, $occupyXPercent: $percent); } }
+        }
+        @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX}-#{$percentString} { @include occupy($xpos: $occupyX, $occupyXPercent: $percent); } }
+    } @else if $percentString == "50" {
+        @each $occupyY in $possibleYOccupy { 
+            .occupy-#{$occupyY} { @include occupy($ypos: $occupyY); } 
+            @each $occupyX in $possibleXOccupy { .occupy-#{$occupyY}-#{$occupyX} { @include occupy($xpos: $occupyX, $ypos: $occupyY); } }
+        }
+        @each $occupyX in $possibleXOccupy { .occupy-#{$occupyX} { @include occupy($xpos: $occupyX); } }    
+    }
 }
-@each $occupyX in $possibleXOccupy { .occupy-#{$occupyX} { @include occupy($xpos: $occupyX); } }
-
 // section templates
 .section { @include section-template(50dvh); }
 .section-fs { @include section-template(100dvh); }
