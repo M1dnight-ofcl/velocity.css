@@ -7,17 +7,17 @@ print(f"""
 """)
 # note: x-x-x preferred but x.x.x will work and be converted to x-x-x
 versionName = input("Please input the version name of this release: ")
-versionName.lower().replace(".", "-")
+versionName = versionName.lower().replace(".", "-")
 
 versionReleaseType = input("Please input the type of this release: ")
 versionReleaseType = f"{versionReleaseType.lower()}"
 
-velocityPath = 'velocity/style/'
-releaseDirectory = 'release'
+velocityPath = f'{os.getcwd()}/velocity/style/'
+releaseDirectory = f'{os.getcwd()}/release/'
 
 if not os.path.exists(releaseDirectory):
-    os.makedir(releaseDirectory)
+    os.mkdir(releaseDirectory)
 
-shutil.make_archive(f"/release/velocity.{versionReleaseType}.{versionName}", 'zip', velocityPath)
+shutil.make_archive(f"release/velocity.{versionReleaseType}.{versionName}", 'zip', velocityPath)
 
-print(f'\nscript complete\nyour file can be found at {os.getcwd()}\\velocity.{versionReleaseType}.{versionName}.zip')
+print(f'\nscript completed with exit 0\nyour file can be found at {os.getcwd()}\\release\\velocity.{versionReleaseType}.{versionName}.zip')
