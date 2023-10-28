@@ -1184,6 +1184,74 @@ body {
   text-align: center;
 }
 
-.prevent-scroll {
+/* padding sizes */
+.padding-xxs {
+  padding: 1px;
+}
+
+.padding-xs {
+  padding: 2.5px;
+}
+
+.padding-s {
+  padding: 5px;
+}
+
+.padding-m {
+  padding: 7.5px;
+}
+
+.padding-l {
+  padding: 10px;
+}
+
+.padding-xl {
+  padding: 15px;
+}
+
+.padding-xxl {
+  padding: 20px;
+}
+
+/* margin sizes  */
+.margin-xxs {
+  margin: 1px;
+}
+
+.margin-xs {
+  margin: 2.5px;
+}
+
+.margin-s {
+  margin: 5px;
+}
+
+.margin-m {
+  margin: 7.5px;
+}
+
+.margin-l {
+  margin: 10px;
+}
+
+.margin-xl {
+  margin: 15px;
+}
+
+.margin-xxl {
+  margin: 20px;
+}
+
+.-prevent-scroll {
   overflow: none;
+}
+
+.-object-fit {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.-object-cover {
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=velocity.func.css.map */

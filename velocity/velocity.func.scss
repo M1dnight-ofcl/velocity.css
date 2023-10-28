@@ -139,5 +139,12 @@ $font-weight: 100,200,300,400,500,600,700,800,thin,light,medium,bold,bolder;
 $txt-aligns: left, right, center;
 @each $align in $txt-aligns { .txt-align-#{$align} { text-align: $align; } };
 
+// margin padding var
+$margin-padding-sizes: ("xxs": 1px, "xs": 2.5px, "s": 5px, "m": 7.5px, "l": 10px, "xl": 15px, "xxl": 20px);
+/* padding sizes */ @each $size, $value in $margin-padding-sizes { .padding-#{$size} { padding: $value; } };
+/* margin sizes  */ @each $size, $value in $margin-padding-sizes { .margin-#{$size} { margin: $value; } };
+
 // prevents scroll
-.prevent-scroll { overflow: none; }
+.-prevent-scroll { overflow: none; }
+.-object-fit { object-fit: contain; }
+.-object-cover { object-fit: contain; }
