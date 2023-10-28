@@ -25,7 +25,8 @@
 
 // default html child styling
 html * { 
-    position: relative; 
+    position: relative;
+    display: block;
     height: auto;
     width: auto;
     padding: 0;
