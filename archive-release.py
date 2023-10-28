@@ -12,8 +12,12 @@ versionName.lower().replace(".", "-")
 versionReleaseType = input("Please input the type of this release: ")
 versionReleaseType = f"{versionReleaseType.lower()}"
 
-velocityPath = os.getcwd() + 'velocity/style/'
+velocityPath = 'velocity/style/'
+releaseDirectory = 'release'
 
-shutil.make_archive(f"velocity.{versionReleaseType}.{versionName}", 'zip', velocityPath)
+if not os.path.exists(releaseDirectory):
+    os.makedir(releaseDirectory)
+
+shutil.make_archive(f"/release/velocity.{versionReleaseType}.{versionName}", 'zip', velocityPath)
 
 print(f'\nscript complete\nyour file can be found at {os.getcwd()}\\velocity.{versionReleaseType}.{versionName}.zip')
