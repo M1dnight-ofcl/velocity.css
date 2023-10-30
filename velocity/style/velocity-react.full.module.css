@@ -1255,4 +1255,262 @@ body {
   object-fit: contain;
 }
 
-/*# sourceMappingURL=velocity.func.css.map */
+.bg-dark-1 {
+  background: #282828;
+}
+
+.txt-dark-1 {
+  color: #e3e3e3;
+}
+
+.border-radius-xxs {
+  border-radius: 0.1vmin;
+}
+
+.border-radius-xs {
+  border-radius: 0.35vmin;
+}
+
+.border-radius-s {
+  border-radius: 0.65vmin;
+}
+
+.border-radius-m {
+  border-radius: 1vmin;
+}
+
+.border-radius-l {
+  border-radius: 1.5vmin;
+}
+
+.border-radius-xl {
+  border-radius: 2vmin;
+}
+
+.border-radius-xxl {
+  border-radius: 3vmin;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.bg-red {
+  background: #e92f2f;
+}
+
+.bg-darkred {
+  background: #971a1a;
+}
+
+.bg-orange {
+  background: #e9832f;
+}
+
+.bg-darkorange {
+  background: #ac5610;
+}
+
+.bg-lightyellow {
+  background: #f2e782;
+}
+
+.bg-yellow {
+  background: #f2e145;
+}
+
+.bg-green {
+  background: #4ee92f;
+}
+
+.bg-darkgreen {
+  background: #288815;
+}
+
+.bg-blue {
+  background: #2b9fe6;
+}
+
+.bg-darkblue {
+  background: #0f347d;
+}
+
+.bg-purple {
+  background: #8819ff;
+}
+
+.bg-magenta {
+  background: #bb1df0;
+}
+
+.bg-lightpink {
+  background: #ee82df;
+}
+
+.bg-pink {
+  background: #f01dd4;
+}
+
+.bg-lightgray {
+  background: #a6a6a6;
+}
+
+.bg-midgray {
+  background: #818181;
+}
+
+.bg-gray {
+  background: #535353;
+}
+
+.bg-darkgray {
+  background: #343434;
+}
+
+.bg-darkestgray {
+  background: #161616;
+}
+
+.bg-lighterslate {
+  background: #6f7488;
+}
+
+.bg-lightslate {
+  background: #4b4f5f;
+}
+
+.bg-slate {
+  background: #343743;
+}
+
+.bg-darkslate {
+  background: #1c1e25;
+}
+
+.bg-plum {
+  background: #993879;
+}
+
+.bg-lightplum {
+  background: #c4509d;
+}
+
+.bg-darkplum {
+  background: #64254f;
+}
+
+.clr-white {
+  color: #fff;
+}
+
+.clr-black {
+  color: #000000;
+}
+
+.clr-red {
+  color: #e92f2f;
+}
+
+.clr-darkred {
+  color: #971a1a;
+}
+
+.clr-orange {
+  color: #e9832f;
+}
+
+.clr-darkorange {
+  color: #ac5610;
+}
+
+.clr-lightyellow {
+  color: #f2e782;
+}
+
+.clr-yellow {
+  color: #f2e145;
+}
+
+.clr-green {
+  color: #4ee92f;
+}
+
+.clr-darkgreen {
+  color: #288815;
+}
+
+.clr-blue {
+  color: #2b9fe6;
+}
+
+.clr-darkblue {
+  color: #0f347d;
+}
+
+.clr-purple {
+  color: #8819ff;
+}
+
+.clr-magenta {
+  color: #bb1df0;
+}
+
+.clr-lightpink {
+  color: #ee82df;
+}
+
+.clr-pink {
+  color: #f01dd4;
+}
+
+.clr-lightgray {
+  color: #a6a6a6;
+}
+
+.clr-midgray {
+  color: #818181;
+}
+
+.clr-gray {
+  color: #535353;
+}
+
+.clr-darkgray {
+  color: #343434;
+}
+
+.clr-darkestgray {
+  color: #161616;
+}
+
+.clr-lighterslate {
+  color: #6f7488;
+}
+
+.clr-lightslate {
+  color: #4b4f5f;
+}
+
+.clr-slate {
+  color: #343743;
+}
+
+.clr-darkslate {
+  color: #1c1e25;
+}
+
+.clr-plum {
+  color: #993879;
+}
+
+.clr-lightplum {
+  color: #c4509d;
+}
+
+.clr-darkplum {
+  color: #64254f;
+}/*# sourceMappingURL=velocity-react.full.module.css.map */

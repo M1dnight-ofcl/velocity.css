@@ -1,5 +1,6 @@
 html * {
   position: relative;
+  display: block;
   height: auto;
   width: auto;
   padding: 0;
@@ -1247,11 +1248,9 @@ body {
 }
 
 .-object-fit {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .-object-cover {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }/*# sourceMappingURL=velocity.func.css.map */
