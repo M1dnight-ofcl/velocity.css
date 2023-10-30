@@ -145,6 +145,14 @@ $margin-padding-sizes: ("xxs": 1px, "xs": 2.5px, "s": 5px, "m": 7.5px, "l": 10px
 /* padding sizes */ @each $size, $value in $margin-padding-sizes { .padding-#{$size} { padding: $value; } };
 /* margin sizes  */ @each $size, $value in $margin-padding-sizes { .margin-#{$size} { margin: $value; } };
 
+// layer classes
+$z-index-keyword-format: ("front": 99, "middle": 20, "back": 1);
+@each $name, $idx in $z-index-keyword-format { .--#{$name}-layer { z-index: $idx; } };
+
+@for $i from 1 through 200 {
+    .--z-index-#{$i} { z-index: $i; }
+}
+
 // prevents scroll
 .-prevent-scroll { overflow: none; }
 .-object-fit { object-fit: contain; }
