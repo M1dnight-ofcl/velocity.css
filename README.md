@@ -14,5 +14,9 @@ To get the latest compiled version of velocity, you can also import the file via
 ```scss
 @import url('https://raw.githubusercontent.com/M1dnight-ofcl/velocity.css/main/velocity/style/velocity.TYPE.css');
 ```
+or you can add this to your html file:
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/M1dnight-ofcl/velocity.css/main/velocity/style/velocity.TYPE.css">
+```
 It should import the latest version.
 **Notice! Since velocity is still in development, there is a high chances a classes name will be changed. I try to avoid this at all costs but it is a possibility so make sure to check the changelog, it will have a link with all the classes that need to be replaced.**
