@@ -10,7 +10,7 @@ You can import each file manually if you downloaded the fucntion and
 style files seperatly, or you can import the full version.
 
 ## Method 2 - URL
-To get the latest compiled version of velocity, you can also import the file via Github. You can simply impoirt it by adding this to the begining of your css file or in a css tage:
+To get the latest compiled version of velocity, you can also import the file via Github. You can simply import it by adding this to the begining of your css file or in a css tage:
 ```scss
 @import url('https://raw.githubusercontent.com/M1dnight-ofcl/velocity.css/main/velocity/style/velocity.TYPE.css');
 ```
