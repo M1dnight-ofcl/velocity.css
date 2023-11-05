@@ -66,6 +66,10 @@
   background: #f2e145;
 }
 
+.bg-mintgreen {
+  background: #ffffff;
+}
+
 .bg-green {
   background: #4ee92f;
 }
@@ -178,6 +182,10 @@
   color: #f2e145;
 }
 
+.clr-mintgreen {
+  color: #ffffff;
+}
+
 .clr-green {
   color: #4ee92f;
 }
@@ -256,4 +264,120 @@
 
 .clr-darkplum {
   color: #64254f;
+}
+
+.border-color-white {
+  border-color: #fff;
+}
+
+.border-color-black {
+  border-color: #000000;
+}
+
+.border-color-red {
+  border-color: #e92f2f;
+}
+
+.border-color-darkred {
+  border-color: #971a1a;
+}
+
+.border-color-orange {
+  border-color: #e9832f;
+}
+
+.border-color-darkorange {
+  border-color: #ac5610;
+}
+
+.border-color-lightyellow {
+  border-color: #f2e782;
+}
+
+.border-color-yellow {
+  border-color: #f2e145;
+}
+
+.border-color-mintgreen {
+  border-color: #ffffff;
+}
+
+.border-color-green {
+  border-color: #4ee92f;
+}
+
+.border-color-darkgreen {
+  border-color: #288815;
+}
+
+.border-color-blue {
+  border-color: #2b9fe6;
+}
+
+.border-color-darkblue {
+  border-color: #0f347d;
+}
+
+.border-color-purple {
+  border-color: #8819ff;
+}
+
+.border-color-magenta {
+  border-color: #bb1df0;
+}
+
+.border-color-lightpink {
+  border-color: #ee82df;
+}
+
+.border-color-pink {
+  border-color: #f01dd4;
+}
+
+.border-color-lightgray {
+  border-color: #a6a6a6;
+}
+
+.border-color-midgray {
+  border-color: #818181;
+}
+
+.border-color-gray {
+  border-color: #535353;
+}
+
+.border-color-darkgray {
+  border-color: #343434;
+}
+
+.border-color-darkestgray {
+  border-color: #161616;
+}
+
+.border-color-lighterslate {
+  border-color: #6f7488;
+}
+
+.border-color-lightslate {
+  border-color: #4b4f5f;
+}
+
+.border-color-slate {
+  border-color: #343743;
+}
+
+.border-color-darkslate {
+  border-color: #1c1e25;
+}
+
+.border-color-plum {
+  border-color: #993879;
+}
+
+.border-color-lightplum {
+  border-color: #c4509d;
+}
+
+.border-color-darkplum {
+  border-color: #64254f;
 }/*# sourceMappingURL=velocity.style.css.map */

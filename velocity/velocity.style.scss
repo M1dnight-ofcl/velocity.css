@@ -33,16 +33,20 @@ $colors: (
     "red": #e92f2f, "darkred": #971a1a,
     "orange": #e9832f, "darkorange": #ac5610,
     "lightyellow": #f2e782, "yellow": #f2e145,
+    "mintgreen": #70dfab,
     "green": #4ee92f, "darkgreen": #288815,
-    "blue": #2b9fe6, "darkblue": #0f347d,
-    "purple": #8819ff,
+    "lightteal": #85ffed, "teal": #00ffd9, "darkteal" #0e8f7c,
+    "lightblue": #7cd2e6,"blue": #2b9fe6, "darkblue": #0f347d,
+    "lightpurple": #b17ce6, "purple": #8819ff, "darkpurple": #451475,
     "magenta": #bb1df0,
     "lightpink": #ee82df, "pink": #f01dd4,
     "lightgray": #a6a6a6, "midgray": #818181, "gray": #535353, "darkgray": #343434, "darkestgray": #161616,
     "lighterslate": #6f7488,"lightslate": #4b4f5f, "slate": #343743, "darkslate": #1c1e25,
-    "plum": #993879, "lightplum": #c4509d, "darkplum": #64254f
+    "plum": #993879, "lightplum": #c4509d, "darkplum": #64254f,
+    "darkcrimson": #300f0f, "crimson": #541010, "lightcrimson": #851919,
 );
 
 // sets all color classes
 @each $color, $hex in $colors { .bg-#{$color} { background: $hex; } }
 @each $color, $hex in $colors { .clr-#{$color} { color: $hex; } }
+@each $color, $hex in $colors { .border-color-#{$color} { border-color: $hex; } }

@@ -144,6 +144,7 @@ $txt-aligns: left, right, center;
 $margin-padding-sizes: ("xxs": 1px, "xs": 2.5px, "s": 5px, "m": 7.5px, "l": 10px, "xl": 15px, "xxl": 20px);
 /* padding sizes */ @each $size, $value in $margin-padding-sizes { .padding-#{$size} { padding: $value; } };
 /* margin sizes  */ @each $size, $value in $margin-padding-sizes { .margin-#{$size} { margin: $value; } };
+/* border sizes  */ @each $size, $value in $margin-padding-sizes { .border-weight-#{$size} { border-width: $value; } };
 
 // layer classes
 $z-index-keyword-format: ("front": 99, "middle": 20, "back": 1);

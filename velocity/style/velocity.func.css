@@ -1243,6 +1243,35 @@ body {
   margin: 20px;
 }
 
+/* border sizes  */
+.border-weight-xxs {
+  border-width: 1px;
+}
+
+.border-weight-xs {
+  border-width: 2.5px;
+}
+
+.border-weight-s {
+  border-width: 5px;
+}
+
+.border-weight-m {
+  border-width: 7.5px;
+}
+
+.border-weight-l {
+  border-width: 10px;
+}
+
+.border-weight-xl {
+  border-width: 15px;
+}
+
+.border-weight-xxl {
+  border-width: 20px;
+}
+
 .--front-layer {
   z-index: 99;
 }
